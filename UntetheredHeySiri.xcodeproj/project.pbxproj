@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F5BDDC719FABF9100EE4ADB /* UntetheredHeySiri.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */; };
+		6F5BDDC919FABF9100EE4ADB /* UntetheredHeySiri.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */; };
+		6F5BDDCF19FABF9100EE4ADB /* UntetheredHeySiri.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F5BDDD019FABF9100EE4ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F5BDDBB19FABF9100EE4ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F5BDDC219FABF9100EE4ADB;
+			remoteInfo = UntetheredHeySiri;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F5BDDC119FABF9100EE4ADB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6F5BDDC719FABF9100EE4ADB /* UntetheredHeySiri.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UntetheredHeySiri.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UntetheredHeySiri.h; sourceTree = "<group>"; };
+		6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UntetheredHeySiri.m; sourceTree = "<group>"; };
+		6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UntetheredHeySiriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F5BDDD419FABF9100EE4ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F5BDDC019FABF9100EE4ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F5BDDCB19FABF9100EE4ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5BDDCF19FABF9100EE4ADB /* UntetheredHeySiri.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F5BDDBA19FABF9100EE4ADB = {
+			isa = PBXGroup;
+			children = (
+				6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */,
+				6F5BDDD219FABF9100EE4ADB /* UntetheredHeySiriTests */,
+				6F5BDDC419FABF9100EE4ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F5BDDC419FABF9100EE4ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */,
+				6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */ = {
+			isa = PBXGroup;
+			children = (
+				6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */,
+				6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */,
+			);
+			path = UntetheredHeySiri;
+			sourceTree = "<group>";
+		};
+		6F5BDDD219FABF9100EE4ADB /* UntetheredHeySiriTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F5BDDD319FABF9100EE4ADB /* Supporting Files */,
+			);
+			path = UntetheredHeySiriTests;
+			sourceTree = "<group>";
+		};
+		6F5BDDD319FABF9100EE4ADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F5BDDD419FABF9100EE4ADB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F5BDDD719FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiri" */;
+			buildPhases = (
+				6F5BDDBF19FABF9100EE4ADB /* Sources */,
+				6F5BDDC019FABF9100EE4ADB /* Frameworks */,
+				6F5BDDC119FABF9100EE4ADB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UntetheredHeySiri;
+			productName = UntetheredHeySiri;
+			productReference = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		6F5BDDCD19FABF9100EE4ADB /* UntetheredHeySiriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F5BDDDA19FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiriTests" */;
+			buildPhases = (
+				6F5BDDCA19FABF9100EE4ADB /* Sources */,
+				6F5BDDCB19FABF9100EE4ADB /* Frameworks */,
+				6F5BDDCC19FABF9100EE4ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F5BDDD119FABF9100EE4ADB /* PBXTargetDependency */,
+			);
+			name = UntetheredHeySiriTests;
+			productName = UntetheredHeySiriTests;
+			productReference = 6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F5BDDBB19FABF9100EE4ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Hamza Sood";
+				TargetAttributes = {
+					6F5BDDC219FABF9100EE4ADB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6F5BDDCD19FABF9100EE4ADB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 6F5BDDBE19FABF9100EE4ADB /* Build configuration list for PBXProject "UntetheredHeySiri" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F5BDDBA19FABF9100EE4ADB;
+			productRefGroup = 6F5BDDC419FABF9100EE4ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */,
+				6F5BDDCD19FABF9100EE4ADB /* UntetheredHeySiriTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F5BDDCC19FABF9100EE4ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F5BDDBF19FABF9100EE4ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5BDDC919FABF9100EE4ADB /* UntetheredHeySiri.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F5BDDCA19FABF9100EE4ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F5BDDD119FABF9100EE4ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */;
+			targetProxy = 6F5BDDD019FABF9100EE4ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6F5BDDD519FABF9100EE4ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/System/Library/PrivateFrameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6F5BDDD619FABF9100EE4ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/System/Library/PrivateFrameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F5BDDD819FABF9100EE4ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6F5BDDD919FABF9100EE4ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6F5BDDDB19FABF9100EE4ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UntetheredHeySiriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6F5BDDDC19FABF9100EE4ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UntetheredHeySiriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F5BDDBE19FABF9100EE4ADB /* Build configuration list for PBXProject "UntetheredHeySiri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F5BDDD519FABF9100EE4ADB /* Debug */,
+				6F5BDDD619FABF9100EE4ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F5BDDD719FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F5BDDD819FABF9100EE4ADB /* Debug */,
+				6F5BDDD919FABF9100EE4ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6F5BDDDA19FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F5BDDDB19FABF9100EE4ADB /* Debug */,
+				6F5BDDDC19FABF9100EE4ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F5BDDBB19FABF9100EE4ADB /* Project object */;
+}
