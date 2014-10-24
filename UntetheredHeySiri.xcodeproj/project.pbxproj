@@ -9,18 +9,7 @@
 /* Begin PBXBuildFile section */
 		6F5BDDC719FABF9100EE4ADB /* UntetheredHeySiri.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */; };
 		6F5BDDC919FABF9100EE4ADB /* UntetheredHeySiri.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */; };
-		6F5BDDCF19FABF9100EE4ADB /* UntetheredHeySiri.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6F5BDDD019FABF9100EE4ADB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F5BDDBB19FABF9100EE4ADB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F5BDDC219FABF9100EE4ADB;
-			remoteInfo = UntetheredHeySiri;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6F5BDDC119FABF9100EE4ADB /* CopyFiles */ = {
@@ -39,8 +28,6 @@
 		6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UntetheredHeySiri.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UntetheredHeySiri.h; sourceTree = "<group>"; };
 		6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UntetheredHeySiri.m; sourceTree = "<group>"; };
-		6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UntetheredHeySiriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F5BDDD419FABF9100EE4ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,14 +38,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F5BDDCB19FABF9100EE4ADB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F5BDDCF19FABF9100EE4ADB /* UntetheredHeySiri.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */,
-				6F5BDDD219FABF9100EE4ADB /* UntetheredHeySiriTests */,
 				6F5BDDC419FABF9100EE4ADB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */,
-				6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,22 +64,6 @@
 				6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */,
 			);
 			path = UntetheredHeySiri;
-			sourceTree = "<group>";
-		};
-		6F5BDDD219FABF9100EE4ADB /* UntetheredHeySiriTests */ = {
-			isa = PBXGroup;
-			children = (
-				6F5BDDD319FABF9100EE4ADB /* Supporting Files */,
-			);
-			path = UntetheredHeySiriTests;
-			sourceTree = "<group>";
-		};
-		6F5BDDD319FABF9100EE4ADB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6F5BDDD419FABF9100EE4ADB /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,24 +86,6 @@
 			productReference = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		6F5BDDCD19FABF9100EE4ADB /* UntetheredHeySiriTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6F5BDDDA19FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiriTests" */;
-			buildPhases = (
-				6F5BDDCA19FABF9100EE4ADB /* Sources */,
-				6F5BDDCB19FABF9100EE4ADB /* Frameworks */,
-				6F5BDDCC19FABF9100EE4ADB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F5BDDD119FABF9100EE4ADB /* PBXTargetDependency */,
-			);
-			name = UntetheredHeySiriTests;
-			productName = UntetheredHeySiriTests;
-			productReference = 6F5BDDCE19FABF9100EE4ADB /* UntetheredHeySiriTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,9 +96,6 @@
 				ORGANIZATIONNAME = "Hamza Sood";
 				TargetAttributes = {
 					6F5BDDC219FABF9100EE4ADB = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					6F5BDDCD19FABF9100EE4ADB = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -173,20 +113,9 @@
 			projectRoot = "";
 			targets = (
 				6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */,
-				6F5BDDCD19FABF9100EE4ADB /* UntetheredHeySiriTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		6F5BDDCC19FABF9100EE4ADB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F5BDDBF19FABF9100EE4ADB /* Sources */ = {
@@ -197,22 +126,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F5BDDCA19FABF9100EE4ADB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6F5BDDD119FABF9100EE4ADB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */;
-			targetProxy = 6F5BDDD019FABF9100EE4ADB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6F5BDDD519FABF9100EE4ADB /* Debug */ = {
@@ -313,36 +227,6 @@
 			};
 			name = Release;
 		};
-		6F5BDDDB19FABF9100EE4ADB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UntetheredHeySiriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		6F5BDDDC19FABF9100EE4ADB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UntetheredHeySiriTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,14 +244,6 @@
 			buildConfigurations = (
 				6F5BDDD819FABF9100EE4ADB /* Debug */,
 				6F5BDDD919FABF9100EE4ADB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		6F5BDDDA19FABF9100EE4ADB /* Build configuration list for PBXNativeTarget "UntetheredHeySiriTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6F5BDDDB19FABF9100EE4ADB /* Debug */,
-				6F5BDDDC19FABF9100EE4ADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
