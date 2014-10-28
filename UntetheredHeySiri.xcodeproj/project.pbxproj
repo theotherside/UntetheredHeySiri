@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F5BDDC719FABF9100EE4ADB /* UntetheredHeySiri.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */; };
-		6F5BDDC919FABF9100EE4ADB /* UntetheredHeySiri.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */; };
+		6F2D12D419FFEFA300B86CF7 /* UntetheredHeySiri.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */; };
+		6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2D12D619FFF05200B86CF7 /* NoFooterGroupSpecifier.m */; };
+		6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6F5BDDC119FABF9100EE4ADB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				6F5BDDC719FABF9100EE4ADB /* UntetheredHeySiri.h in CopyFiles */,
+				6F2D12D419FFEFA300B86CF7 /* UntetheredHeySiri.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6F2D12D519FFF05200B86CF7 /* NoFooterGroupSpecifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoFooterGroupSpecifier.h; sourceTree = "<group>"; };
+		6F2D12D619FFF05200B86CF7 /* NoFooterGroupSpecifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoFooterGroupSpecifier.m; sourceTree = "<group>"; };
+		6F2D12D919FFF3C800B86CF7 /* AssistantController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistantController.h; sourceTree = "<group>"; };
 		6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UntetheredHeySiri.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UntetheredHeySiri.h; sourceTree = "<group>"; };
-		6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UntetheredHeySiri.m; sourceTree = "<group>"; };
+		6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantControllerHooks.m; sourceTree = "<group>"; };
+		6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = UntetheredHeySiri.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2D12D819FFF2EE00B86CF7 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F2D12D519FFF05200B86CF7 /* NoFooterGroupSpecifier.h */,
+				6F2D12D619FFF05200B86CF7 /* NoFooterGroupSpecifier.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		6F5BDDBA19FABF9100EE4ADB = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +73,10 @@
 		6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */ = {
 			isa = PBXGroup;
 			children = (
-				6F5BDDC619FABF9100EE4ADB /* UntetheredHeySiri.h */,
-				6F5BDDC819FABF9100EE4ADB /* UntetheredHeySiri.m */,
+				6F2D12D919FFF3C800B86CF7 /* AssistantController.h */,
+				6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */,
+				6F2D12D819FFF2EE00B86CF7 /* Helper Classes */,
+				6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */,
 			);
 			path = UntetheredHeySiri;
 			sourceTree = "<group>";
@@ -122,7 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F5BDDC919FABF9100EE4ADB /* UntetheredHeySiri.m in Sources */,
+				6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */,
+				6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +224,10 @@
 		6F5BDDD819FABF9100EE4ADB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -219,8 +237,10 @@
 		6F5BDDD919FABF9100EE4ADB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -246,6 +266,7 @@
 				6F5BDDD919FABF9100EE4ADB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
