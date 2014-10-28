@@ -66,7 +66,7 @@ NSNumber *VoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SE
 
 void SetVoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SEL _cmd, NSNumber *allowedWhenDisconnected, PSSpecifier *specifier) {
     [VTPreferences.sharedPreferences setVoiceTriggerEnabledWhenChargerDisconnected:allowedWhenDisconnected.boolValue];
-    notify_post("kVTPreferencesVoiceTriggerEnabledDidChangeDarwinNotification");
+    notify_post(kVTPreferencesVoiceTriggerEnabledDidChangeDarwinNotification);
 }
 
 #pragma mark -
