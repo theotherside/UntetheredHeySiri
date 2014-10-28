@@ -10,6 +10,7 @@
 		6F2D12D419FFEFA300B86CF7 /* UntetheredHeySiri.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */; };
 		6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2D12D619FFF05200B86CF7 /* NoFooterGroupSpecifier.m */; };
 		6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */; };
+		6FBB4AA31A000F780098DF2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB4AA21A000F780098DF2C /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +24,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FBB4A9E1A000F780098DF2C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +41,20 @@
 		6F2D12D919FFF3C800B86CF7 /* AssistantController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistantController.h; sourceTree = "<group>"; };
 		6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UntetheredHeySiri.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantControllerHooks.m; sourceTree = "<group>"; };
+		6FBB4AA01A000F780098DF2C /* postrm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = postrm; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBB4AA21A000F780098DF2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = UntetheredHeySiri.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6F5BDDC019FABF9100EE4ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBB4A9D1A000F780098DF2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */,
+				6FBB4AA11A000F780098DF2C /* PostRemove */,
 				6F5BDDC419FABF9100EE4ADB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */,
+				6FBB4AA01A000F780098DF2C /* postrm */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +100,14 @@
 				6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */,
 			);
 			path = UntetheredHeySiri;
+			sourceTree = "<group>";
+		};
+		6FBB4AA11A000F780098DF2C /* PostRemove */ = {
+			isa = PBXGroup;
+			children = (
+				6FBB4AA21A000F780098DF2C /* main.m */,
+			);
+			path = PostRemove;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +130,23 @@
 			productReference = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		6FBB4A9F1A000F780098DF2C /* PostRemove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FBB4AA61A000F780098DF2C /* Build configuration list for PBXNativeTarget "PostRemove" */;
+			buildPhases = (
+				6FBB4A9C1A000F780098DF2C /* Sources */,
+				6FBB4A9D1A000F780098DF2C /* Frameworks */,
+				6FBB4A9E1A000F780098DF2C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PostRemove;
+			productName = PostRemove;
+			productReference = 6FBB4AA01A000F780098DF2C /* postrm */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +157,9 @@
 				ORGANIZATIONNAME = "Hamza Sood";
 				TargetAttributes = {
 					6F5BDDC219FABF9100EE4ADB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6FBB4A9F1A000F780098DF2C = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -128,6 +177,7 @@
 			projectRoot = "";
 			targets = (
 				6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */,
+				6FBB4A9F1A000F780098DF2C /* PostRemove */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +189,14 @@
 			files = (
 				6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */,
 				6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FBB4A9C1A000F780098DF2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBB4AA31A000F780098DF2C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +305,24 @@
 			};
 			name = Release;
 		};
+		6FBB4AA41A000F780098DF2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = postrm;
+			};
+			name = Debug;
+		};
+		6FBB4AA51A000F780098DF2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = postrm;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -267,6 +343,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6FBB4AA61A000F780098DF2C /* Build configuration list for PBXNativeTarget "PostRemove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBB4AA41A000F780098DF2C /* Debug */,
+				6FBB4AA51A000F780098DF2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

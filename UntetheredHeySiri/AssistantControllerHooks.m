@@ -31,7 +31,7 @@
 
 @implementation AssistantControllerHooks
 
-PSSpecifier *_allowedWhileDisconnectedSpecifier;
+PSSpecifier *_allowedWhenDisconnectedSpecifier;
 
 - (NSArray *)specifiers {
     if (_specifiers == nil) {
@@ -40,16 +40,16 @@ PSSpecifier *_allowedWhileDisconnectedSpecifier;
             object_setClass(voiceActivationGroupSpecifier, [NoFooterGroupSpecifier class]);
             [voiceActivationGroupSpecifier removePropertyForKey:PSFooterTextGroupKey];
             
-            _allowedWhileDisconnectedSpecifier = [[PSSpecifier preferenceSpecifierNamed:@"AllowedWhileDisconnected"
+            _allowedWhenDisconnectedSpecifier = [[PSSpecifier preferenceSpecifierNamed:@"AllowedWhenDisconnected"
                                                                                  target:self
-                                                                                    set:@selector(setVoiceTriggerAllowedWhileDisconnected:specifier:)
-                                                                                    get:@selector(voiceTriggerAllowedWhileDisconnected:)
+                                                                                    set:@selector(setVoiceTriggerAllowedWhenDisconnected:specifier:)
+                                                                                    get:@selector(voiceTriggerAllowedWhenDisconnected:)
                                                                                  detail:Nil
                                                                                    cell:[PSTableCell cellTypeFromString:@"PSSegmentCell"]
                                                                                    edit:Nil]retain];
-            [_allowedWhileDisconnectedSpecifier setValues:@[@NO, @YES] titles:@[@"While Charging", @"Always"]];
+            [_allowedWhenDisconnectedSpecifier setValues:@[@NO, @YES] titles:@[@"While Charging", @"Always"]];
             if ([[self voiceTrigger:nil]boolValue])
-                [updates appendSpecifier:_allowedWhileDisconnectedSpecifier toGroupWithID:@"VOICE_ACTIVATION_GROUP"];
+                [updates appendSpecifier:_allowedWhenDisconnectedSpecifier toGroupWithID:@"VOICE_ACTIVATION_GROUP"];
         }];
         [_specifiers release];
         _specifiers = [updatedSpecifiers retain];
@@ -60,12 +60,12 @@ PSSpecifier *_allowedWhileDisconnectedSpecifier;
 #pragma mark -
 #pragma mark Added Methods
 
-NSNumber *VoiceTriggerAllowedWhileDisconnected(AssistantControllerHooks *self, SEL _cmd, PSSpecifier *specifier) {
-    return @([[VTPreferences sharedPreferences]voiceTriggerEnabledWhenChargerDisconnected]);
+NSNumber *VoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SEL _cmd, PSSpecifier *specifier) {
+    return @(VTPreferences.sharedPreferences.voiceTriggerEnabledWhenChargerDisconnected);
 }
 
-void SetVoiceTriggerAllowedWhileDisconnected(AssistantControllerHooks *self, SEL _cmd, NSNumber *allowedWhileDisconnected, PSSpecifier *specifier) {
-    [[VTPreferences sharedPreferences]setVoiceTriggerEnabledWhenChargerDisconnected:allowedWhileDisconnected.boolValue];
+void SetVoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SEL _cmd, NSNumber *allowedWhenDisconnected, PSSpecifier *specifier) {
+    [VTPreferences.sharedPreferences setVoiceTriggerEnabledWhenChargerDisconnected:allowedWhenDisconnected.boolValue];
     notify_post("kVTPreferencesVoiceTriggerEnabledDidChangeDarwinNotification");
 }
 
@@ -74,13 +74,13 @@ void SetVoiceTriggerAllowedWhileDisconnected(AssistantControllerHooks *self, SEL
 - (void)setVoiceTrigger:(NSNumber *)voiceTrigger forSpecifier:(PSSpecifier *)specifier {
     [super setVoiceTrigger:voiceTrigger forSpecifier:specifier];
     if (voiceTrigger.boolValue)
-        [self insertSpecifier:_allowedWhileDisconnectedSpecifier afterSpecifierID:@"VOICE_ACTIVATION" animated:YES];
+        [self insertSpecifier:_allowedWhenDisconnectedSpecifier afterSpecifierID:@"VOICE_ACTIVATION" animated:YES];
     else
-        [self removeSpecifier:_allowedWhileDisconnectedSpecifier animated:YES];
+        [self removeSpecifier:_allowedWhenDisconnectedSpecifier animated:YES];
 }
 
 - (void)dealloc {
-    [_allowedWhileDisconnectedSpecifier release];
+    [_allowedWhenDisconnectedSpecifier release];
     [super dealloc];
 }
 
@@ -98,8 +98,8 @@ void AssistantBundleLoadedNotificationFired(CFNotificationCenterRef center, void
     dispatch_once(&onceToken, ^{
         Class $AssistantController = objc_getClass("AssistantController");
         MSHookClassPair($AssistantController, [AssistantControllerHooks class], [_AssistantControllerHooks class]);
-        class_addMethod($AssistantController, @selector(voiceTriggerAllowedWhileDisconnected:), (IMP)VoiceTriggerAllowedWhileDisconnected, "@@:@");
-        class_addMethod($AssistantController, @selector(setVoiceTriggerAllowedWhileDisconnected:specifier:), (IMP)SetVoiceTriggerAllowedWhileDisconnected, "v@:@@");
+        class_addMethod($AssistantController, @selector(voiceTriggerAllowedWhenDisconnected:), (IMP)VoiceTriggerAllowedWhenDisconnected, "@@:@");
+        class_addMethod($AssistantController, @selector(setVoiceTriggerAllowedWhenDisconnected:specifier:), (IMP)SetVoiceTriggerAllowedWhenDisconnected, "v@:@@");
         CFNotificationCenterRemoveObserver(CFNotificationCenterGetLocalCenter(),
                                            bundleLoadedObserver,
                                            (CFStringRef)NSBundleDidLoadNotification,

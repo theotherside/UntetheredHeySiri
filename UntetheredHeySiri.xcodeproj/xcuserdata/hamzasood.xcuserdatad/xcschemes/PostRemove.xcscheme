@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F5BDDC219FABF9100EE4ADB"
-               BuildableName = "UntetheredHeySiri.dylib"
-               BlueprintName = "UntetheredHeySiri"
-               ReferencedContainer = "container:UntetheredHeySiri.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FBB4A9F1A000F780098DF2C"
                BuildableName = "postrm"
                BlueprintName = "PostRemove"
@@ -46,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F5BDDC219FABF9100EE4ADB"
-            BuildableName = "UntetheredHeySiri.dylib"
-            BlueprintName = "UntetheredHeySiri"
+            BlueprintIdentifier = "6FBB4A9F1A000F780098DF2C"
+            BuildableName = "postrm"
+            BlueprintName = "PostRemove"
             ReferencedContainer = "container:UntetheredHeySiri.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,15 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F5BDDC219FABF9100EE4ADB"
-            BuildableName = "UntetheredHeySiri.dylib"
-            BlueprintName = "UntetheredHeySiri"
+            BlueprintIdentifier = "6FBB4A9F1A000F780098DF2C"
+            BuildableName = "postrm"
+            BlueprintName = "PostRemove"
             ReferencedContainer = "container:UntetheredHeySiri.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,15 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F5BDDC219FABF9100EE4ADB"
-            BuildableName = "UntetheredHeySiri.dylib"
-            BlueprintName = "UntetheredHeySiri"
+            BlueprintIdentifier = "6FBB4A9F1A000F780098DF2C"
+            BuildableName = "postrm"
+            BlueprintName = "PostRemove"
             ReferencedContainer = "container:UntetheredHeySiri.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
