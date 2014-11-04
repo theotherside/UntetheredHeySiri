@@ -10,6 +10,7 @@
 		6F2D12D419FFEFA300B86CF7 /* UntetheredHeySiri.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */; };
 		6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2D12D619FFF05200B86CF7 /* NoFooterGroupSpecifier.m */; };
 		6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */; };
+		6F823D791A09701A00B0DCB1 /* UntetheredHeySiriSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F823D781A09701A00B0DCB1 /* UntetheredHeySiriSwitch.m */; };
 		6FBB4AA31A000F780098DF2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBB4AA21A000F780098DF2C /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,10 @@
 		6F2D12D919FFF3C800B86CF7 /* AssistantController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssistantController.h; sourceTree = "<group>"; };
 		6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = UntetheredHeySiri.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5E80C119FAC2EC00F5B7FD /* AssistantControllerHooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistantControllerHooks.m; sourceTree = "<group>"; };
+		6F823D701A096FA000B0DCB1 /* UntetheredHeySiriSwitch.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UntetheredHeySiriSwitch.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F823D731A096FA000B0DCB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F823D771A09701A00B0DCB1 /* UntetheredHeySiriSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UntetheredHeySiriSwitch.h; sourceTree = "<group>"; };
+		6F823D781A09701A00B0DCB1 /* UntetheredHeySiriSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UntetheredHeySiriSwitch.m; sourceTree = "<group>"; };
 		6FBB4AA01A000F780098DF2C /* postrm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = postrm; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBB4AA21A000F780098DF2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = UntetheredHeySiri.plist; sourceTree = "<group>"; };
@@ -48,6 +53,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		6F5BDDC019FABF9100EE4ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F823D6D1A096FA000B0DCB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				6F5BDDC519FABF9100EE4ADB /* UntetheredHeySiri */,
+				6F823D711A096FA000B0DCB1 /* FlipSwitch */,
 				6FBB4AA11A000F780098DF2C /* PostRemove */,
 				6F5BDDC419FABF9100EE4ADB /* Products */,
 			);
@@ -87,6 +100,7 @@
 			children = (
 				6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */,
 				6FBB4AA01A000F780098DF2C /* postrm */,
+				6F823D701A096FA000B0DCB1 /* UntetheredHeySiriSwitch.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +114,24 @@
 				6FF33DEC19FFEF00008401A7 /* UntetheredHeySiri.plist */,
 			);
 			path = UntetheredHeySiri;
+			sourceTree = "<group>";
+		};
+		6F823D711A096FA000B0DCB1 /* FlipSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				6F823D771A09701A00B0DCB1 /* UntetheredHeySiriSwitch.h */,
+				6F823D781A09701A00B0DCB1 /* UntetheredHeySiriSwitch.m */,
+				6F823D721A096FA000B0DCB1 /* Supporting Files */,
+			);
+			path = FlipSwitch;
+			sourceTree = "<group>";
+		};
+		6F823D721A096FA000B0DCB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F823D731A096FA000B0DCB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6FBB4AA11A000F780098DF2C /* PostRemove */ = {
@@ -130,6 +162,23 @@
 			productReference = 6F5BDDC319FABF9100EE4ADB /* UntetheredHeySiri.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		6F823D6F1A096FA000B0DCB1 /* FlipSwitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F823D761A096FA000B0DCB1 /* Build configuration list for PBXNativeTarget "FlipSwitch" */;
+			buildPhases = (
+				6F823D6C1A096FA000B0DCB1 /* Sources */,
+				6F823D6D1A096FA000B0DCB1 /* Frameworks */,
+				6F823D6E1A096FA000B0DCB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlipSwitch;
+			productName = FlipSwitch;
+			productReference = 6F823D701A096FA000B0DCB1 /* UntetheredHeySiriSwitch.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		6FBB4A9F1A000F780098DF2C /* PostRemove */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FBB4AA61A000F780098DF2C /* Build configuration list for PBXNativeTarget "PostRemove" */;
@@ -159,6 +208,9 @@
 					6F5BDDC219FABF9100EE4ADB = {
 						CreatedOnToolsVersion = 6.1;
 					};
+					6F823D6F1A096FA000B0DCB1 = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					6FBB4A9F1A000F780098DF2C = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -177,10 +229,21 @@
 			projectRoot = "";
 			targets = (
 				6F5BDDC219FABF9100EE4ADB /* UntetheredHeySiri */,
+				6F823D6F1A096FA000B0DCB1 /* FlipSwitch */,
 				6FBB4A9F1A000F780098DF2C /* PostRemove */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F823D6E1A096FA000B0DCB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F5BDDBF19FABF9100EE4ADB /* Sources */ = {
@@ -189,6 +252,14 @@
 			files = (
 				6F2D12D719FFF05200B86CF7 /* NoFooterGroupSpecifier.m in Sources */,
 				6F5E80C219FAC2EC00F5B7FD /* AssistantControllerHooks.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F823D6C1A096FA000B0DCB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F823D791A09701A00B0DCB1 /* UntetheredHeySiriSwitch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +372,36 @@
 			};
 			name = Release;
 		};
+		6F823D741A096FA000B0DCB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = FlipSwitch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Switches";
+				PRODUCT_NAME = UntetheredHeySiriSwitch;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6F823D751A096FA000B0DCB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FlipSwitch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Switches";
+				PRODUCT_NAME = UntetheredHeySiriSwitch;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		6FBB4AA41A000F780098DF2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +410,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = postrm;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -316,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = postrm;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -336,6 +439,15 @@
 			buildConfigurations = (
 				6F5BDDD819FABF9100EE4ADB /* Debug */,
 				6F5BDDD919FABF9100EE4ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F823D761A096FA000B0DCB1 /* Build configuration list for PBXNativeTarget "FlipSwitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F823D741A096FA000B0DCB1 /* Debug */,
+				6F823D751A096FA000B0DCB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

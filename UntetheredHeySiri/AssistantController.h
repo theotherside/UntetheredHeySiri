@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Hamza Sood. All rights reserved.
 //
 
+@import Preferences;
+
 @interface PSListController (AssistantControllerMethods)
 - (NSNumber *)voiceTrigger:(PSSpecifier *)sender;
 - (void)setVoiceTrigger:(NSNumber *)voiceTrigger forSpecifier:(PSSpecifier *)specifier;

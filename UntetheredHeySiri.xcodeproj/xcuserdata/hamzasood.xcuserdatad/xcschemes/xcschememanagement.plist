@@ -4,13 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PostRemove.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>UntetheredHeySiri.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -25,6 +18,11 @@
 			<true/>
 		</dict>
 		<key>6F5BDDCD19FABF9100EE4ADB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F823D6F1A096FA000B0DCB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

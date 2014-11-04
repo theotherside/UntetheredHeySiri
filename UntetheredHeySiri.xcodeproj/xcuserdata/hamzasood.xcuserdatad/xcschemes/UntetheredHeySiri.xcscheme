@@ -28,6 +28,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6F823D6F1A096FA000B0DCB1"
+               BuildableName = "UntetheredHeySiriSwitch.bundle"
+               BlueprintName = "FlipSwitch"
+               ReferencedContainer = "container:UntetheredHeySiri.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FBB4A9F1A000F780098DF2C"
                BuildableName = "postrm"
                BlueprintName = "PostRemove"

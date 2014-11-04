@@ -8,11 +8,14 @@
 
 @import Preferences;
 @import CydiaSubstrate;
+@import FlipSwitch;
 @import VoiceTrigger.VTPreferences;
 
 #import "AssistantController.h"
 #import "NoFooterGroupSpecifier.h"
 #import <notify.h>
+
+#define kSwitchBundleIdentifier @"com.hamzasood.UntetheredHeySiriSwitch"
 
 
 
@@ -33,6 +36,16 @@
 
 PSSpecifier *_allowedWhenDisconnectedSpecifier;
 
+- (id)init {
+    if ((self = [super init])) {
+        [NSNotificationCenter.defaultCenter addObserver:self
+                                               selector:@selector(flipSwitchDidChangeNotification:)
+                                                   name:FSSwitchPanelSwitchStateChangedNotification
+                                                 object:nil];
+    }
+    return self;
+}
+
 - (NSArray *)specifiers {
     if (_specifiers == nil) {
         NSArray *updatedSpecifiers = [super.specifiers arrayByPerformingSpecifierUpdatesUsingBlock:^(PSSpecifierUpdates *updates) {
@@ -48,7 +61,7 @@ PSSpecifier *_allowedWhenDisconnectedSpecifier;
                                                                                    cell:[PSTableCell cellTypeFromString:@"PSSegmentCell"]
                                                                                    edit:Nil]retain];
             [_allowedWhenDisconnectedSpecifier setValues:@[@NO, @YES] titles:@[@"While Charging", @"Always"]];
-            if ([[self voiceTrigger:nil]boolValue])
+            if (VTPreferences.sharedPreferences.voiceTriggerEnabled)
                 [updates appendSpecifier:_allowedWhenDisconnectedSpecifier toGroupWithID:@"VOICE_ACTIVATION_GROUP"];
         }];
         [_specifiers release];
@@ -61,12 +74,17 @@ PSSpecifier *_allowedWhenDisconnectedSpecifier;
 #pragma mark Added Methods
 
 NSNumber *VoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SEL _cmd, PSSpecifier *specifier) {
-    return @(VTPreferences.sharedPreferences.voiceTriggerEnabledWhenChargerDisconnected);
+    return @([FSSwitchPanel.sharedPanel stateForSwitchIdentifier:kSwitchBundleIdentifier] == FSSwitchStateOn ? YES : NO);
 }
 
 void SetVoiceTriggerAllowedWhenDisconnected(AssistantControllerHooks *self, SEL _cmd, NSNumber *allowedWhenDisconnected, PSSpecifier *specifier) {
-    [VTPreferences.sharedPreferences setVoiceTriggerEnabledWhenChargerDisconnected:allowedWhenDisconnected.boolValue];
-    notify_post(kVTPreferencesVoiceTriggerEnabledDidChangeDarwinNotification.UTF8String);
+    [FSSwitchPanel.sharedPanel setState:(allowedWhenDisconnected.boolValue ? FSSwitchStateOn : FSSwitchStateOff) forSwitchIdentifier:kSwitchBundleIdentifier];
+}
+
+void FlipSwitchDidChangeNotification(AssistantControllerHooks *self, SEL _cmd, NSNotification* notification) {
+    if ([[notification.userInfo objectForKey:FSSwitchPanelSwitchIdentifierKey]isEqualToString:kSwitchBundleIdentifier]) {
+        [self reloadSpecifier:_allowedWhenDisconnectedSpecifier animated:YES];
+    }
 }
 
 #pragma mark -
@@ -100,6 +118,7 @@ void AssistantBundleLoadedNotificationFired(CFNotificationCenterRef center, void
         MSHookClassPair($AssistantController, [AssistantControllerHooks class], [_AssistantControllerHooks class]);
         class_addMethod($AssistantController, @selector(voiceTriggerAllowedWhenDisconnected:), (IMP)VoiceTriggerAllowedWhenDisconnected, "@@:@");
         class_addMethod($AssistantController, @selector(setVoiceTriggerAllowedWhenDisconnected:specifier:), (IMP)SetVoiceTriggerAllowedWhenDisconnected, "v@:@@");
+        class_addMethod($AssistantController, @selector(flipSwitchDidChangeNotification:), (IMP)FlipSwitchDidChangeNotification, "v@:@");
         CFNotificationCenterRemoveObserver(CFNotificationCenterGetLocalCenter(),
                                            bundleLoadedObserver,
                                            (CFStringRef)NSBundleDidLoadNotification,
